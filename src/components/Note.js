@@ -8,7 +8,7 @@ class Note extends React.Component {
 	
 	componentWillMount(){
 		this.state = this._getState();
-		ActionCreators.githubFile("/"+this.props.params.notebook+"/"+this.props.params.note);
+		ActionCreators.githubFile(this.props.params.notebook+"/"+this.props.params.note);
 	}
 	
 	_getState() {
@@ -33,7 +33,8 @@ class Note extends React.Component {
 	}
 	
 	componentWillReceiveProps(newProps){
-		ActionCreators.githubFile("/"+newProps.notebook+"/"+newProps.note);
+		console.log(newProps);
+		ActionCreators.githubFile(newProps.notebook+"/"+newProps.note);
 	}
 	
   render() {
