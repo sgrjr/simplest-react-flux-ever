@@ -4,7 +4,7 @@ import LibraryActionCreators from '../actions/LibraryActionCreators';
 import GithubDirectory from './GithubDirectory';
 import Loading from './Loading';
 		
-class LinkedIndex extends React.Component {
+class LibraryIndex extends React.Component {
 
 	componentWillMount(){
 		this.state = this._getState();
@@ -84,4 +84,4 @@ class LinkedIndex extends React.Component {
 	
 }
 
-module.exports = LinkedIndex;
+module.exports = LibraryIndex;
