@@ -8,6 +8,7 @@ class Note extends React.Component {
 	
 	componentWillMount(){
 		this.state = this._getState();
+
 		ActionCreators.githubFile(this.props.params.notebook+"/"+this.props.params.note);
 	}
 	

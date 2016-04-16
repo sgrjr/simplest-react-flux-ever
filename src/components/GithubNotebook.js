@@ -18,7 +18,7 @@ class GithubNotebook extends React.Component {
 					}
 					
 					if(n.name.charAt(0) !== '_'){
-						return (<div key={key}><div dangerouslySetInnerHTML={{__html: section}} ></div><li><GithubNote notebook={notebook} key={Math.random()} note={n} /></li></div>);
+						return (<div key={key}><div dangerouslySetInnerHTML={{__html: section}} ></div><li><GithubNote notebook={notebook} key={Math.random()} note={n} basePath="/library/"/></li></div>);
 					}
 				});
 

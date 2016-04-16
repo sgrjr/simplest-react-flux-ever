@@ -11,11 +11,10 @@ import Note from './components/Note';
 import NoMatch from './components/NoMatch';
  
 export default (
-	<Route path="/" component={App}>
+	<Route path="/library" component={App}>
 		<IndexRoute component={Library}></IndexRoute>
-		<Route path="library" component={Library}></Route>
-		<Route path="library/:notebook" component={Notebook}></Route>
-		<Route path="library/:notebook/:note" component={Note}></Route>
+		<Route path=":notebook" component={Notebook}></Route>
+		<Route path=":notebook/:note" component={Note}></Route>
 		<Route path="*" component={NoMatch}/>
 	</Route>
 );

@@ -7,7 +7,7 @@ class GithubNote extends React.Component {
 	let note = this.props.note;
 
 	return (
-		<Link to={note.path}>{note.name}</Link>
+		<Link to={this.props.basePath+note.path}>{note.name}</Link>
 		);
 	}
 

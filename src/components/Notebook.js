@@ -9,7 +9,7 @@ class Notebook extends React.Component {
 
 	componentWillMount(){
 		this.state = this._getState();
-		ActionCreators.githubNotebook("/"+this.props.params.notebook);
+		ActionCreators.githubNotebook(this.props.params.notebook);
 	}
 	
 	_getState() {
@@ -59,7 +59,7 @@ class Notebook extends React.Component {
 			<div id="minimal-list" className="container">
 				{this.state.content}
 			</div>	
-			
+
 			{this.props.children}
 		</div>
     )
@@ -78,5 +78,4 @@ class Notebook extends React.Component {
 	}
 	
 }
-
 module.exports = Notebook;
